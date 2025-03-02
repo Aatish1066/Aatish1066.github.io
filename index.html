@@ -1,1 +1,66 @@
-Under Construction
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        #countdown {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚧 Website Under Construction 🚧</h1>
+        <p>We are working hard to launch soon. Stay tuned!</p>
+        <div id="countdown">Loading...</div>
+    </div>
+    <script>
+        function countdown() {
+            const launchDate = new Date("2025-06-01T00:00:00").getTime();
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = launchDate - now;
+                
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById("countdown").innerHTML = "We're Live!";
+                    return;
+                }
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }, 1000);
+        }
+        countdown();
+    </script>
+</body>
+</html>
