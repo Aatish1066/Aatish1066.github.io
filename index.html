@@ -15,7 +15,20 @@
             text-align: center;
             font-family: Arial, sans-serif;
             overflow: hidden;
+            position: relative;
         }
+
+        .top-right-image {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .top-right-image img {
+            width: 100px; /* Adjust size as needed */
+            height: auto;
+        }
+
         .container {
             max-width: 600px;
             padding: 20px;
@@ -23,10 +36,12 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
+
         h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
         }
+
         #countdown {
             font-size: 1.5em;
             margin-top: 10px;
@@ -34,12 +49,16 @@
     </style>
 </head>
 <body>
-    <div class="container"><img src="https://tryhackme-badges.s3.amazonaws.com/Aatish1066.png" alt="Your Image Badge" /></div>
+    <div class="top-right-image">
+        <img src="https://tryhackme-badges.s3.amazonaws.com/Aatish1066.png" alt="Your Image Badge" />
+    </div>
+
     <div class="container">
         <h1>🚧 Website Under Construction 🚧</h1>
         <p>We are working hard to launch soon. Stay tuned!</p>
         <div id="countdown">Loading...</div>
     </div>
+
     <script>
         function countdown() {
             const launchDate = new Date("2025-06-01T00:00:00").getTime();
