@@ -1,86 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(45deg, #141e30, #243b55);
-            color: white;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-            position: relative;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aatish Sharma | Infosec & ML</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(45deg, #141e30, #243b55);
+      color: white;
+    }
 
-        .top-right-image {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
+    header {
+      padding: 50px 20px;
+      text-align: center;
+    }
 
-        .top-right-image img {
-            width: 300px; /* Adjust size as needed */
-            height: auto;
-        }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
 
-        .container {
-            max-width: 600px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-        }
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+    .section {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
 
-        #countdown {
-            font-size: 1.5em;
-            margin-top: 10px;
-        }
-    </style>
+    .section h2 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+
+    .section p, .section ul {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    .socials a {
+      color: #00bcd4;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    .badge {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+
+    .badge img {
+      width: 250px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.9em;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .project {
+      margin-bottom: 15px;
+    }
+
+    .project-title {
+      font-weight: bold;
+      color: #00bcd4;
+    }
+
+    .cert {
+      margin-bottom: 5px;
+    }
+  </style>
 </head>
 <body>
-    <div class="top-right-image">
-        <img src="https://tryhackme-badges.s3.amazonaws.com/Aatish1066.png" alt="Your Image Badge" />
-    </div>
 
-    <div class="container">
-        <h1>🚧 Website Under Construction 🚧</h1>
-        <p>We are working hard to launch soon. Stay tuned!</p>
-        <div id="countdown">Loading...</div>
-    </div>
+  <div class="badge">
+    <img src="https://tryhackme-badges.s3.amazonaws.com/Aatish1066.png" alt="Badge">
+  </div>
 
-    <script>
-        function countdown() {
-            const launchDate = new Date("2025-06-01T00:00:00").getTime();
-            const timer = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = launchDate - now;
-                
-                if (distance < 0) {
-                    clearInterval(timer);
-                    document.getElementById("countdown").innerHTML = "We're Live!";
-                    return;
-                }
-                
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-                document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-            }, 1000);
-        }
-        countdown();
-    </script>
+  <header>
+    <h1>Hi 👋, I'm Aatish Sharma</h1>
+    <p>Infosec Practitioner | ML Explorer | Tech Enthusiast</p>
+  </header>
+
+  <div class="section">
+    <h2>🧠 About Me</h2>
+    <p>I’m a cybersecurity enthusiast with a strong foundation in cryptography, ethical hacking, and machine learning. I blend academic learning with real-world practice, working on projects that combine AI and security. I believe in continuous learning and pushing boundaries to build robust digital defenses.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔭 Current Focus</h2>
+    <p>Working on hybrid AI-based fraud detection systems and practical cryptographic applications. Learning to deploy secure and intelligent systems using ML, GANs, LSTM, and Isolation Forests.</p>
+  </div>
+
+  <div class="section">
+    <h2>🧑‍💻 Projects</h2>
+    <div class="project">
+      <p class="project-title">🔍 Anomaly Detection System</p>
+      <p>Used Python and ML algorithms to detect unusual patterns and outliers in time-series data, aiding early threat detection.</p>
+    </div>
+    <div class="project">
+      <p class="project-title">🏨 Hotel Management System</p>
+      <p>Developed a full-stack Spring Boot + MySQL web app to manage bookings, customer data, and pricing models.</p>
+    </div>
+    <div class="project">
+      <p class="project-title">🔐 Deep Learning-based Cryptography</p>
+      <p>Explored novel encryption schemes by integrating neural networks with traditional cryptographic methods using TensorFlow.</p>
+    </div>
+    <div class="project">
+      <p class="project-title">🧬 Hybrid AI Detection Engine</p>
+      <p>Built a fraud detection engine using GANs, LSTM, and SHAP for both predictive accuracy and explainability.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🎓 Education</h2>
+    <ul>
+      <li><strong>M.Tech (Computer Science & Information Security)</strong> – PEC Chandigarh (2024–2026)</li>
+      <li><strong>B.Tech (Information Technology)</strong> – JUIT, Solan (2020–2024) – GPA: 8.6</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📜 Certifications</h2>
+    <ul>
+      <li class="cert">Google Cybersecurity Professional</li>
+      <li class="cert">Certified Network Security Practitioner – SecOps Group</li>
+      <li class="cert">Certified AppSec Practitioner – SecOps Group</li>
+      <li class="cert">API Security Fundamentals</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🛠️ Skills & Tools</h2>
+    <p><strong>Languages:</strong> Python, SQL, Bash, Java, KQL, C/C++, HTML/CSS, JavaScript, PHP, React</p>
+    <p><strong>Tools & Platforms:</strong> TensorFlow, Spring Boot, Docker, Wireshark, Autopsy, Metasploit, OpenVAS, Elastic Stack, Kali Linux</p>
+  </div>
+
+  <div class="section">
+    <h2>📫 Let's Connect</h2>
+    <p>Have an exciting idea or want to work on something cool together?</p>
+    <div class="socials">
+      <a href="mailto:aatisharma715@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/aatish-sharma-6665071b9" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Aatish1066" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🏆 Achievements</h2>
+    <ul>
+      <li>GATE qualified on first attempt</li>
+      <li>Ranked Top 3% on TryHackMe</li>
+    </ul>
+  </div>
+
+  <footer>
+    © 2025 Aatish Sharma | Securing tomorrow with AI and Cyber Knowledge.
+  </footer>
+
 </body>
 </html>
